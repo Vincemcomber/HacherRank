@@ -1,54 +1,15 @@
-"""
-You are given a positive integer N. 
-Your task is to print a palindromic triangle of size N.
-For example, a palindromic triangle of size 5 is:
-1
-121
-12321
-1234321
-123454321
-You can't take more than two lines. The first line (a for-statement) is already written for you. 
-You have to complete the code using exactly one print statement.
+# ========================
+#       Information
+# ========================
 
-Note: 
-Using anything related to strings will give a score of 0. 
-Using more than one for-statement will give a score of 0.
+# Direct Link: https://www.hackerrank.com/challenges/triangle-quest-2/problem?isFullScreen=true
 
-Input Format
-A single line of input containing the integer N.
+# Language: Python
 
-Output Format
-Print the palindromic triangle of size N as explained above.
+# ========================
+#         Solution
+# ========================
 
-Sample Input
-5
-
-Sample Output
-1
-121
-12321
-1234321
-123454321
-"""
-
-# SOLUTION
-# Reading number of rows
-row = int(input('Enter how many lines? '))
-
-# Generating pattern
-for i in range(1,row+1):
+for i in range(1,int(input())+1): 
+    print(((10**i-1)//9)**2)
     
-    # for space
-    for j in range(1, row+1-i):
-        print(' ', end='')
-    
-    # for increasing pattern
-    for j in range(1,i+1):
-        print(j, end='')
-    
-    # for decreasing pattern 
-    for j in range(i-1,0,-1):
-        print(j, end='')
-    
-    # Moving to next line
-    print()
